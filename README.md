@@ -59,5 +59,9 @@ engine.recorder.save_graphviz_svg("add_multiply.svg")
 <img src="docs/source/_static/images/add_multiply.svg" height="600" alt="Provenance graph example"/>
 </p>
 
+## Development
+
+Contributor setup (uv syncing, Ruff linting, test commands, etc.) lives in the [Development guide](docs/source/development.rst).
+
 ## License
 [MIT](http://opensource.org/licenses/MIT)

@@ -56,6 +56,11 @@ tests = [
     "pytest-asyncio",
 ]
 
+[dependency-groups]
+dev = [
+    "ruff>=0.14.4",
+]
+
 
 
 [project.entry-points."node_graph.node"]
@@ -98,3 +103,24 @@ tests = [
 
 [project.entry-points."node_graph.type_promotion"]
 "workgraph.builtins_mapping" = "node_graph.link:TYPE_PROMOTIONS"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+src = ["src"]
+extend-exclude = ["docs", "html", "runinfo"]
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "W",  # pycodestyle warnings
+    "I",  # isort
+    "UP", # pyupgrade
+    "B",  # bugbear
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
